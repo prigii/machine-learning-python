@@ -6,26 +6,26 @@ str(iris)
 
 #chi-squared test
 chi_plot
-flowers<-iris %>% 
+flowers<-iris %>%
   mutate(Size=cut(Sepal.Length,
                   breaks = 3,
                   labels = c('small', 'medium', 'large'))) %>%
   select(Species, Size)
 
 #chi-sq goodness of fit test
-flowers %>% 
-  select(Size) %>% 
-  table() %>% 
+flowers %>%
+  select(Size) %>%
+  table() %>%
   chisq.test()
 
 #chi-sq test of independence
-flowers %>% 
+flowers %>%
   table()%>%
   chisq.test()
-  
+
 #linear regression
 names(cars)
 
-cars %>% 
-  lm(dist ~ speed, data = .) %>% 
+cars %>%
+  lm(dist ~ speed, data = .) %>%
   summary()
