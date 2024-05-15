@@ -137,3 +137,4 @@ diamonds %>%
 mean_price=transmute(diamonds, avg_price = mean(price))
 view(mean_price)
 
+?paste

@@ -14,8 +14,19 @@ m1 = matrix(v1, nrow=3)
 m1
 m2 = matrix(v2, nrow=3)
 m2
-a = as.array(m1, m2)
+a = as.array(m1)
 a
+a2 = as.array(m2)
+m2
+m1+m2
+m2-m1
+m2/m1
+m2*m1
+
+v1*v2
+
+k = matrix(v1*v2, nrow = 3)
+k
 
 # OR
 print("Two vectors of different lengths:")

@@ -94,9 +94,6 @@ hist(df$x)
 ggplot(df, aes(x)) +
   geom_histogram(bins = 15, 
                  colour ='red')
-ggplot(df, aes(x)) +
-  geom_(bins = 15, 
-                 colour ='red')
 
 data("iris")
 attach(iris)
@@ -109,6 +106,8 @@ summary(iris)
 library(ggplot2)
 ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
   geom_point(colour='red')+
+  geom_smooth(method='lm',
+              se=FALSE) +
   labs(title = 'Sepals',
        x='Sepal Length',
        y='Sepal Width',
@@ -126,10 +125,13 @@ ggplot(iris, aes(x= Species,
                      colour = Species)) +
   geom_boxplot(show.legend = FALSE) 
 
-describe(Sepal.Length)
+library(dplyr)
+summarise(Sepal.Length)
 
 cor.test(Sepal.Length, Sepal.Width)
 cor.test(Sepal.Length, Petal.Length)
 data = table(Sepal.Length, Species)
 barplot(data)
 View(data)
+
+

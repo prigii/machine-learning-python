@@ -1,3 +1,4 @@
+library(tidyverse)
 data("iris")
 ?iris
 glimpse(iris)
@@ -29,3 +30,5 @@ names(cars)
 cars %>%
   lm(dist ~ speed, data = .) %>%
   summary()
+
+
