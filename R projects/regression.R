@@ -33,6 +33,7 @@ summary(g)
 
 # correlation
 cor.test(x, y)
+cor(x,y)
 
 #qqplot
 qqplot(x,y, plot.it = TRUE)
